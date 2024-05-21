@@ -54,4 +54,10 @@ class MainTest {
         assertThat(test("a", false)).isEqualTo("a");
     }
 
+    @Test
+    void cases_from_email() {
+        assertThat(test("aaa", false, 'a')).isEmpty(); // The delimiters now are removed
+        assertThat(test("aba", false, 'a')).isEqualTo("b"); // The delimiters are still removed
+        assertThat(test("abac", true, 'a')).isEqualTo("BC"); // The first character is now capitalized
+    }
 }
