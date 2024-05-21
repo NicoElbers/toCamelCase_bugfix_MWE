@@ -43,6 +43,9 @@ public class Main {
                 index += Character.charCount(codePoint);
             }
         }
+
+        // It might make more sense to remove this if statement, and handle the case of only delimiters above the for loop
+        // but my goal was to change the code minimally, so I decided against that refactor.
         if (outOffset != 0) {
             return new String(newCodePoints, 0, outOffset);
         }
