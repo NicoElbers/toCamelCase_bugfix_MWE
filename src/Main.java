@@ -22,7 +22,9 @@ public class Main {
 
         // Changes start here
         int startIndex = 0;
-        while (startIndex < strLen && delimiterSet.contains(str.codePointAt(startIndex)))  startIndex++;
+        while (startIndex < strLen && delimiterSet.contains(str.codePointAt(startIndex))) {
+            startIndex += Character.charCount(str.codePointAt(startIndex));
+        }
 
         System.out.println("Input: " + str);
         System.out.println("Delim: " + delimiterSet);
