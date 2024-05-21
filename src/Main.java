@@ -26,15 +26,8 @@ public class Main {
             startIndex += Character.charCount(str.codePointAt(startIndex));
         }
 
-        System.out.println("Input: " + str);
-        System.out.println("Delim: " + delimiterSet);
-        System.out.println("Index: " + startIndex);
-
         for (int index = startIndex;index < strLen;) { // Start the loop to create the string
             final int codePoint = str.codePointAt(index);
-
-            System.out.println("Char: " + (char)codePoint);
-            System.out.println("Cap : " + capitalizeNext);
 
             if (delimiterSet.contains(codePoint)) {
                 capitalizeNext = true;
