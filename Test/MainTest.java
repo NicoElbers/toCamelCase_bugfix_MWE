@@ -4,13 +4,7 @@ import static org.assertj.core.api.Assertions.*;
 
 class MainTest {
     String test(String str, final boolean capitalizeFirstLetter, final char... delimiters) {
-//        System.out.println(str);
-//        System.out.println(capitalizeFirstLetter);
-//        System.out.println(delimiters);
-//        System.out.println();
-//        return Main.toCamelCase(str, capitalizeFirstLetter, delimiters);
         return Main.toCamelCase(str, capitalizeFirstLetter, delimiters);
-
     }
 
     @Test
